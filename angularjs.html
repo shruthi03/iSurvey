@@ -1,0 +1,43 @@
+<html ng-app = "myApp" ng-init = "person={firstName:'John',lastName:'Doe'};points=[1,15,19,2,40]">
+  <head> 
+	<title> Example </title> 
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"> </script>
+  </head>
+
+<body> 
+
+	<script src = "myApp.js"> </script>
+	<script src = "myCtrl.js"> </script>
+
+	<label for = "user_name">Enter Name </label>
+	<input type = "text" id = "user_name" ng-model = "name" /> 
+
+	<p> This is data binding example using expression </p>
+	{{name}}
+	
+	<p> This is data binding example using ng-bind </p>
+	<p ng-bind = "name"> </p>
+	
+	
+	
+	<p> This is array example in ng-init using expression </p>
+	<p>The third result is {{ points[2] }}</p>
+	
+	<p> This is array example in ng-init using ng-bind </p>
+	<p ng-bind = "points[0]"> </p>
+	
+	
+	<p> This is String example in ng-init using ng-bind </p>
+	<p ng-bind = "person.firstName"> </p>
+
+	<p> This is String example in ng-init using expression </p>
+	<p>The name is {{ person.lastName }}</p>
+	
+	<div ng-controller="myCtrl">
+	{{ firstName + " " + lastName }}
+	</div>
+	
+</body>
+		
+	
+</html>
